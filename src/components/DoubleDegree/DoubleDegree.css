@@ -1,0 +1,62 @@
+.sectionWrapper {
+  width: 100%;
+  background: #f6f6f6;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: Bitter, serif;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+/* GRID WRAPPER */
+.grids {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px 40px;
+  justify-items: center;
+}
+
+/* LOGO STYLE */
+.logoUni {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  padding: 15px;
+}
+
+/* Center the last logo */
+.centerLast {
+  grid-column: 2 / 3; 
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .centerLast {
+    grid-column: 1 / -1;   
+    justify-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

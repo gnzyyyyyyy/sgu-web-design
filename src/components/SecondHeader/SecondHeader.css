@@ -1,0 +1,130 @@
+/* === Navbar Container === */
+.navbar2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #4da3ff;
+  padding: 15px 30px;
+  transition: all 0.4s ease;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+/* === Nav Menu === */
+.nav-menu {
+  flex: 1;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+display: flex;
+align-items: center;
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #02001d;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li:hover {
+  color: #fff;
+}
+
+.nav-menu li::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-menu li:hover::after {
+  width: 100%;
+}
+
+/* === Button Styling === */
+.portal-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #265782; /* Light Blue */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 20px; /* space from last li */
+}
+
+.portal-button:hover {
+  background-color: #2f8ae0;
+  transform: translateY(-2px);
+}
+
+.navbar.scrolled .login-button {
+  padding: 8px 18px;
+  font-size: 15px;
+}
+
+
+/* === Responsive Design === */
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .search-box {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  ul {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 130px;
+  }
+
+  .navbar.scrolled .logo {
+    width: 100px;
+  }
+
+  ul li {
+    font-size: 15px;
+  }
+
+  .toggle-icon {
+    width: 35px;
+    margin-left: 10px;
+  }
+
+  .search-box {
+    min-width: 140px;
+    padding: 6px 10px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+  }
+}

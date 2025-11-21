@@ -1,0 +1,151 @@
+/* === Navbar Container === */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px 30px;
+  transition: all 0.4s ease;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* === Shrinking on Scroll === */
+.navbar.scrolled {
+  padding: 8px 25px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* === Logo === */
+.logo {
+  width: 160px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled .logo {
+  width: 120px;
+}
+
+/* === Nav Menu === */
+ul {
+  flex: 1;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+display: flex;
+align-items: center;
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #02001d;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+ul li:hover {
+  color: #4da3ff;
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #4da3ff;
+  transition: width 0.3s ease;
+}
+
+ul li:hover::after {
+  width: 100%;
+}
+
+/* === Button Styling === */
+.login-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #4da3ff; 
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 20px; 
+}
+
+.login-button:hover {
+  background-color: #2f8ae0;
+  transform: translateY(-2px);
+}
+
+.navbar.scrolled .login-button {
+  padding: 8px 18px;
+  font-size: 15px;
+}
+
+
+/* === Responsive  === */
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .search-box {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  ul {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 130px;
+  }
+
+  .navbar.scrolled .logo {
+    width: 100px;
+  }
+
+  ul li {
+    font-size: 15px;
+  }
+
+  .toggle-icon {
+    width: 35px;
+    margin-left: 10px;
+  }
+
+  .search-box {
+    min-width: 140px;
+    padding: 6px 10px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+  }
+}

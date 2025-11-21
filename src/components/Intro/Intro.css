@@ -1,0 +1,178 @@
+/* ==========================================
+   MAIN INTRO LAYOUT
+========================================== */
+.intro {
+  display: flex;
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+  background: #e9e9e9;
+}
+
+/* LEFT side (carousel area) */
+.intro-left {
+  flex: 2;
+  background: #265782;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Carousel container */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* MAIN center image */
+.main-img {
+  width: 890px;        /* slightly smaller to allow larger side images */
+  height: 396px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* SIDE images */
+.small-img {
+  width: 737px;      /* larger than before */
+  height: 328px;
+  border-radius: 8px;
+  object-fit: cover;
+
+  opacity: 0.5;      /* no heavy transparency */
+  transform: scale(0.96);
+  transition: transform 0.6s ease-in-out;
+}
+
+/* No more clipping — cleaner and more premium look */
+.left-img {}
+
+.right-img {}
+
+/* ==========================================
+   RIGHT SIDE TEXT SECTION
+========================================== */
+.intro-right {
+  flex: 1;
+  background: rgba(36, 162, 226, 0.15);
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* center logo horizontally */
+  justify-content: center;
+  text-align: center;
+}
+
+.intro-logo {
+  width: 200px;
+  margin-bottom: 25px;
+}
+
+/* Larger, black paragraph text */
+.intro-text {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.55;
+  font-family: "Bitter", serif;
+  color: #000;               /* changed from white */
+  max-width: 90%;
+}
+
+/* Smooth transitions */
+.main-img,
+.small-img {
+  transition: all 0.7s ease-in-out;
+}
+
+/* When sliding OUT from center */
+.shrink-center {
+  transform: scale(0.75) translateX(-150px);
+  opacity: 0.4;
+}
+
+/* When center image moves to left side */
+.shrink-side {
+  transform: scale(0.85) translateX(-120px);
+  opacity: 0.45;
+}
+
+/* When right image moves INTO center */
+.grow-center {
+  transform: scale(1.05) translateX(-150px);
+  opacity: 1;
+}
+
+/* After animation ends, normalize */
+.grow-in {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Fade-out for exiting images */
+.fade-out {
+  opacity: 0.4;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1100px) {
+  .main-img {
+    width: 600px;
+    height: 300px;
+  }
+  .small-img {
+    width: 360px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .intro {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .intro-left {
+    height: 320px;
+  }
+
+  .carousel-container {
+    gap: 8px;
+  }
+
+  .main-img {
+    width: 320px;
+    height: 190px;
+  }
+
+  .small-img {
+    width: 180px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 540px) {
+  .main-img {
+    width: 250px;
+    height: 150px;
+  }
+
+  .small-img {
+    width: 130px;
+    height: 90px;
+  }
+
+  .intro-text {
+    font-size: 18px;
+  }
+
+  .intro-logo {
+    width: 160px;
+  }
+}

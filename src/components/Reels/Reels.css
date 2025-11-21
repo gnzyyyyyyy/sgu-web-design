@@ -1,0 +1,57 @@
+.sgu-reels-section {
+  width: 100%;
+  padding: 40px 20px;
+  background: #d5e9ff;    /* Light blue background */
+  font-family: "Bitter", serif;
+}
+
+.sgu-reels-title {
+  text-align: center;
+  color: #0d3c61;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* Horizontal scroller */
+.sgu-reels-scroller {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.sgu-reels-scroller::-webkit-scrollbar {
+  height: 10px;
+}
+
+.sgu-reels-scroller::-webkit-scrollbar-thumb {
+  background: #90b9e0;
+  border-radius: 10px;
+}
+
+.reel-card {
+  min-width: 320px;
+  max-width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+.reel-iframe {
+  width: 100%;
+  height: 540px; /* Instagram embed fixed ratio */
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .reel-card {
+    min-width: 260px;
+  }
+  .reel-iframe {
+    height: 460px;
+  }
+}
