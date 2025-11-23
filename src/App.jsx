@@ -9,6 +9,8 @@ import Faculties from './components/Faculties/Faculties';
 import Values from './components/Values/Values';
 import NewsEvent from './components/NewsEvent/NewsEvent';
 import Reels from './components/Reels/Reels';
+import StudentsExp from './components/StudentsExp/StudentsExp';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <Values />
       <NewsEvent />
       <Reels />
+      <StudentsExp />
+      <Footer />
     </div>
   );
 }

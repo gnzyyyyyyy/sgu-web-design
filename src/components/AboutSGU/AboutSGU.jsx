@@ -79,6 +79,7 @@ const AboutSGU = () => {
                             <div className="rector-position">
                                 Vice Rector of Non-Academic Affairs Swiss German University
                             </div>
+                            <button className="about-btn">Meet Our Long Life Coaches</button>
                         </div>
                     </div>
                 </div>
