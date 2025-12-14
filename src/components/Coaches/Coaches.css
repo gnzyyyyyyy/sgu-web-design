@@ -1,0 +1,196 @@
+.admission_page {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #4da3ff;
+  border-bottom: 3px solid #955e10  ;
+  padding: 1rem 0;
+}
+
+.header-logo {
+  height: 100px;
+  object-fit: contain;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0.75rem;
+}
+
+.nav-btn {
+  background-color: #114bb1;
+  border: 2px solid #000;
+  border-radius: 6px;
+  color: #fff;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: #0d3b8a;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  color: #4da3ff;
+  text-align: center;
+}
+
+/* Faculty filter */
+.faculty-filter {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: #ffffff;
+  border: 2px solid #b8d7f3;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0d3c61;
+}
+
+.filter-btn.active {
+  background: #4da3ff;
+  color: #fff;
+}
+
+/* Lecturer grid */
+.lecturer-grid {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* Lecturer card */
+.lecturer-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 3px solid #b8d7f3;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  color: #000;
+}
+
+/* Square image */
+.lecturer-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #90b9e0;
+  margin-bottom: 12px;
+}
+
+.lecturer-card h4 {
+  color: #0d3c61;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.lecturer-card p {
+  color: #163b56;
+  font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .lecturer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .lecturer-img {
+    height: 220px;
+  }
+
+  .lecturer-card h4 {
+    font-size: 16px;
+  }
+
+  .lecturer-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    height: 70px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    margin: 1.5rem 0;
+  }
+
+  .nav-tabs {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .lecturer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .lecturer-card {
+    padding: 14px;
+  }
+
+  .lecturer-img {
+    height: 180px;
+  }
+
+  .lecturer-card h4 {
+    font-size: 15px;
+  }
+
+  .lecturer-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lecturer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lecturer-img {
+    height: 200px;
+  }
+
+  .filter-btn {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}

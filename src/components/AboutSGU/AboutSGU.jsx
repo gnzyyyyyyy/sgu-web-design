@@ -2,6 +2,7 @@ import React from "react";
 import MrSamPK from "../../assets/images/paksam.webp";
 import MrLeo from "../../assets/images/LeoRusli.jpg";
 import MrJames from "../../assets/images/jamespurnama.jpg"
+import { Link } from 'react-router-dom'
 
 import "./AboutSGU.css";
 
@@ -79,7 +80,9 @@ const AboutSGU = () => {
                             <div className="rector-position">
                                 Vice Rector of Non-Academic Affairs Swiss German University
                             </div>
-                            <button className="about-btn">Meet Our Long Life Coaches</button>
+                            <Link to="/coaches" style={{ textDecoration: "none", color: "inherit" }} >
+                                <button className="about-btn">Meet Our Long Life Coaches</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

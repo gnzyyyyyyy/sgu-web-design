@@ -1,0 +1,29 @@
+.scholarship-banner-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /* Give the container real height so footer stays down */
+  max-width: 1200px;
+  margin: 40px auto;
+
+  /* Keeps height based on image aspect ratio */
+  aspect-ratio: 16 / 6; /* adjust to your banner shape */
+  overflow: hidden;
+}
+
+.scholarship-banner-image {
+  position: absolute;
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 10px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Visible image */
+.scholarship-banner-image.fade {
+  opacity: 1;
+  z-index: 2;
+}

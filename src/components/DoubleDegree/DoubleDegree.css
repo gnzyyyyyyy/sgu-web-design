@@ -36,27 +36,42 @@
 
 /* Responsive */
 @media (max-width: 900px) {
-  .grid {
+  .grids {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .centerLast {
-    grid-column: 1 / -1;   
+    grid-column: 1 / -1;
     justify-self: center;
   }
-}
 
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .logo {
-    width: 180px;
-    height: 180px;
+  .logoUni {
+    width: 200px;
+    height: 200px;
   }
 
   .title {
-    font-size: 28px;
+    font-size: 32px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .grids {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .centerLast {
+    grid-column: auto;
+  }
+
+  .logoUni {
+    width: 170px;
+    height: 170px;
+  }
+
+  .title {
+    font-size: 26px;
   }
 }

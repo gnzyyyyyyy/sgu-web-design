@@ -62,13 +62,43 @@
   background: #1568a1;
 }
 
-@media (max-width: 900px) {
-  .bachelor-grid {
-    grid-template-columns: 1fr;
-    max-width: 450px;
+@media (max-width: 768px) {
+  .Values-section {
+    padding: 50px 16px;
   }
 
-  .bachelor-faculties-desc {
-    font-size: 16px;
+  .Values-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 360px;
+  }
+
+  .values-img {
+    max-width: 260px;
+  }
+
+  .faculty-btn {
+    font-size: 15px;
+    padding: 9px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Values-title {
+    font-size: 22px;
+  }
+
+  .values-img {
+    max-width: 230px;
+  }
+
+  .faculty-btn {
+    font-size: 14px;
+    padding: 8px 14px;
   }
 }

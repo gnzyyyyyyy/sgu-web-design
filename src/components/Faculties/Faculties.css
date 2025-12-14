@@ -114,26 +114,105 @@
 /* ===========================
    RESPONSIVE
 =========================== */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .bachelor-grid {
+    gap: 50px;
+  }
+
+  .bachelor-faculties-desc {
+    font-size: 17px;
+    padding: 0 10px;
+  }
+
+  .master-row {
+    gap: 24px;
+  }
+
+  .master-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Titles */
+  .faculties-title {
+    font-size: 26px;
+    padding-top: 30px;
+  }
+
+  .bachelor-faculties-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  /* Bachelor Grid */
   .bachelor-grid {
     grid-template-columns: 1fr;
-    max-width: 450px;
+    gap: 40px;
+    max-width: 360px;
+  }
+
+  .faculty-img {
+    max-width: 260px;
+  }
+
+  .faculty-btn {
+    font-size: 15px;
+    padding: 9px 16px;
+  }
+
+  /* Master Programs */
+  .master-wrapper {
+    margin-top: 60px;
   }
 
   .master-row {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
+    gap: 18px;
+    padding: 0 10px;
   }
 
   .master-img {
-    width: 80%;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
   }
 
   .master-text {
-    width: 90%;
+    width: 100%;
+  }
+
+  .master-title {
+    font-size: 20px;
+  }
+
+  .master-text p {
+    font-size: 15px;
+    line-height: 1.6;
   }
 
   .master-btn {
-    margin: 15px auto 0 auto;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faculties-title {
+    font-size: 23px;
+  }
+
+  .bachelor-faculties-desc {
+    font-size: 15px;
+  }
+
+  .faculty-img {
+    max-width: 230px;
+  }
+
+  .master-title {
+    font-size: 18px;
   }
 }

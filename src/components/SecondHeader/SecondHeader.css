@@ -1,130 +1,102 @@
-/* === Navbar Container === */
-.navbar2 {
+.second-header {
   width: 100%;
+  background: #4da3ff;
+  padding: 10px 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  overflow-x: auto; /* ✅ allow horizontal scroll */
+}
+
+/* === Navigation === */
+.second-nav {
+  list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: #4da3ff;
-  padding: 15px 30px;
-  transition: all 0.4s ease;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-}
-
-
-/* === Nav Menu === */
-.nav-menu {
-  flex: 1;
-  list-style: none;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  gap: 75px;
-  flex-wrap: wrap;
+  justify-content: space-between; /* ✅ keeps items visible */
+  gap: 40px;
   margin: 0;
   padding: 0;
+  white-space: nowrap;
 }
 
-.nav-menu li {
-display: flex;
-align-items: center;
-  position: relative;
-  font-size: 17px;
+/* Prevent shrinking */
+.second-nav li,
+.second-portal-btn {
+  flex-shrink: 0;
+}
+
+/* === Nav Items === */
+.second-nav li {
+  font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0.5px;
   color: #02001d;
   cursor: pointer;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.nav-menu li:hover {
+.second-nav li:hover {
   color: #fff;
 }
 
-.nav-menu li::after {
+.second-nav li::after {
   content: "";
   position: absolute;
-  bottom: -4px;
+  bottom: -3px;
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #fff;
+  background: #fff;
   transition: width 0.3s ease;
 }
 
-.nav-menu li:hover::after {
+.second-nav li:hover::after {
   width: 100%;
 }
 
-/* === Button Styling === */
-.portal-button {
-  padding: 10px 20px;
-  font-size: 16px;
+/* === Portal Button === */
+.second-portal-btn {
+  padding: 6px 14px;
+  font-size: 14px;
   font-weight: 600;
-  background-color: #265782; /* Light Blue */
+  background: #265782;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-left: 20px; /* space from last li */
 }
 
-.portal-button:hover {
-  background-color: #2f8ae0;
-  transform: translateY(-2px);
+.second-portal-btn:hover {
+  background: #2f8ae0;
+  transform: translateY(-1px);
 }
 
-.navbar.scrolled .login-button {
-  padding: 8px 18px;
-  font-size: 15px;
-}
-
-
-/* === Responsive Design === */
-@media (max-width: 900px) {
-  .navbar {
-    flex-wrap: wrap;
-    padding: 10px 20px;
+@media (max-width: 768px) {
+  .second-nav {
+    gap: 24px;
   }
 
-  .search-box {
-    order: 3;
-    width: 100%;
-    margin-top: 10px;
-    justify-content: center;
+  .second-nav li {
+    font-size: 13px;
   }
 
-  ul {
-    gap: 20px;
+  .second-portal-btn {
+    font-size: 13px;
+    padding: 5px 12px;
   }
 }
 
-@media (max-width: 600px) {
-  .logo {
-    width: 130px;
+@media (max-width: 480px) {
+  .second-nav {
+    gap: 18px;
   }
 
-  .navbar.scrolled .logo {
-    width: 100px;
+  .second-nav li {
+    font-size: 12px;
   }
 
-  ul li {
-    font-size: 15px;
-  }
-
-  .toggle-icon {
-    width: 35px;
-    margin-left: 10px;
-  }
-
-  .search-box {
-    min-width: 140px;
-    padding: 6px 10px;
-  }
-
-  .search-box input {
-    font-size: 14px;
+  .second-portal-btn {
+    font-size: 12px;
+    padding: 4px 10px;
   }
 }
